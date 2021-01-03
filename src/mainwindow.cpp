@@ -70,31 +70,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//void MainWindow::ros_init()
-//{
-//    cout<<"subscribed to left image topic: "<<"/mynteye/left/image_rect"<<endl;
-//    cout<<"sbuscribed to right image topic: "<<"/mynteye/right/image_rect"<<endl;
-//
-////    left_sub = nh.subscribe("/mynteye/left/image_rect", 1000, &MainWindow::FetchLeftImage, this);
-////    left_sub = nh.subscribe("/mynteye/right/image_rect", 1000, &MainWindow::FetchRightImage, this);
-//
-//    message_filters::Subscriber<sensor_msgs::Image> left_sub(nh, "/mynteye/left/image_rect", 10);
-//    message_filters::Subscriber<sensor_msgs::Image> right_sub(nh, "/mynteye/right/image_rect", 10);
-//
-//    typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::Image> sync_pol;
-//    message_filters::Synchronizer<sync_pol> sync(sync_pol(10), left_sub, right_sub);
-//    sync.setMaxIntervalDuration(ros::Duration(0.01));
-//    sync.registerCallback(boost::bind(&MainWindow::FetchImages, _1, _2));
-//
-//
-//    cout<<"spining"<<endl;
-//
-//    ros::spin();
-//
-//    cout<<"after spining"<<endl;
-//}
-
-
 void MainWindow::ros_init()
 {
     cout<<"subscribed to left image topic: "<<"/mynteye/left/image_rect"<<endl;
