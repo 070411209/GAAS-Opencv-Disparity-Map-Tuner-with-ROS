@@ -103,8 +103,8 @@ void MainWindow::ros_init()
 //    left_sub = nh.subscribe("/mynteye/left/image_rect", 1000, &MainWindow::FetchLeftImage, this);
 //    left_sub = nh.subscribe("/mynteye/right/image_rect", 1000, &MainWindow::FetchRightImage, this);
 
-    string left_topic = "/mynteye/left/image_rect";
-    string right_topic = "/mynteye/right/image_rect";
+    string left_topic = "/mo_camera/left_image";
+    string right_topic = "/mo_camera/right_image";
 
     message_filters::Subscriber<sensor_msgs::Image> left_sub(nh, left_topic, 10);
     message_filters::Subscriber<sensor_msgs::Image> right_sub(nh, right_topic, 10);
